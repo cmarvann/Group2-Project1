@@ -8,10 +8,14 @@
     --primary-color: black;
     --secondary-color: #ec2127;
     --hover-color: #ff9296;
-    --box-color: rgb(224, 224, 224);
+    --box-color: rgba(224, 224, 224, 0.75);
 }
 
 body {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: #f7f7f7;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -124,30 +128,39 @@ h2 {
     font-size: 14px;
 }
 
-.info-box button {
+.button {
     margin: 20px 20px 15px 0px;
-    padding: 5px;
+    padding: 10px;
     border-style: none;
     background-color: black;
     color: var(--secondary-color);
     font-size: 18px;
-    width: 120%;
+    width: 75px;
     border-radius: 5px;
+    text-align: center;
 }
 
-.info-box button:hover {
+.button:hover {
     color: var(--hover-color);
     background-color: rgb(75, 75, 75);
+}
+
+.form {
+    background-color: var(--box-color);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    width: 400px;
 }
 
 .form table {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     text-align: left;
-    font-size: 24px;
+    font-size: 16px;
     border-spacing: 20px;
     border-collapse: collapse;
-    max-width: 400px;
+    width: 100%;
 }
 
 .righty, .lefty {
