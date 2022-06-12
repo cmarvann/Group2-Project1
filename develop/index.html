@@ -12,19 +12,26 @@
         <main>
             <header class="headerbar">
                 <img src="./assets/images/dragon-ampersand2.png" alt="dragon ampersand"/>
-                <h1>Character Creator</h1>
+                <h1><a href="#">Character Creator</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#basics">Basics</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </nav>
             </header>
 
-            <section class="sheet">
+            <section class="sheet" id="basics">
                 <div class="info-box">
-                    <p>Welcome to the character creator! Please enter your character's information and stats in the following order, clicking enter after each one:</p>
-                    <ol>
-                        <li>Name</li>
-                        <li>Race</li>
-                        <li>Class</li>
-                        <li>Subclass</li>
-                    </ol>
-                    <textarea></textarea>
+                    <p>Welcome to the character creator! Please enter your character's information and stats:</p>
+                    <p>Name:</p>
+                    <input type="text" class="fillin">
+                    <p>Race:</p>
+                    <input type="text" class="fillin">
+                    <p>Class:</p>
+                    <input type="text" class="fillin">
+                    <p>Subclass:</p>
+                    <input type="text" class="fillin">
                 <p><button>Enter</button></p>
                 </div>
                 <div class="form">
@@ -45,6 +52,31 @@
                         <tr>
                             <th>Subclass:</th>
                             <td>Enter Subclass</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="info-box">
+                    <p>Now we're going to look through skills and add them to your character:</p>
+                    <input type="text" class="fillin">
+                <p><button>Enter</button></p>
+                </div>
+                <div class="form">
+                    <h2>Skill Sheet</h2>
+                    <table>
+                        <tr>
+                            <th class="righty">Primary Skill:</th>
+                            <td class="lefty">Enter Skill</td>
+                        </tr>
+                        <tr>
+                            <th class="righty">Secondary skill:</th>
+                            <td class="lefty">Enter Skill</td>
+                        </tr>
+                        <tr>
+                            <th>Tertiary Skill:</th>
+                            <td>Enter Skill</td>
                         </tr>
                     </table>
                 </div>
