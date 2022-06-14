@@ -32,26 +32,26 @@
                     <input type="text" class="fillin" id="class">
                     <p>Subclass:</p>
                     <input type="text" class="fillin" id="subclass">
-                <span class="button">Enter</span>
+                <span class="saveBtn button">Enter</span>
                 </div>
                 <div class="form">
                     <h2>Character Sheet</h2>
                     <table>
                         <tr>
                             <th class="righty">Name:</th>
-                            <td class="lefty">Enter Name</td>
+                            <td class="lefty" id="nameList">Enter Name</td>
                         </tr>
                         <tr>
                             <th class="righty">Race:</th>
-                            <td class="lefty">Enter Race</td>
+                            <td class="lefty" id="raceList">Enter Race</td>
                         </tr>
                         <tr>
                             <th class="righty">Class:</th>
-                            <td class="lefty">Enter Class</td>
+                            <td class="lefty" id="classList">Enter Class</td>
                         </tr>
                         <tr>
                             <th>Subclass:</th>
-                            <td>Enter Subclass</td>
+                            <td id="subclassList">Enter Subclass</td>
                         </tr>
                     </table>
                 </div>
@@ -60,8 +60,8 @@
             <section id="skills">
                 <div class="info-box">
                     <p>Now we're going to look through skills and add them to your character:</p>
-                    <input type="text" class="fillin">
-                    <span onclick="newElement()" class="button">Add</span>
+                    <input type="text" class="fillin" id="skill">
+                    <span class="addBtn button">Add</span>
                 </div>
                 <div class="form">
                     <h2>Skill Sheet</h2>
