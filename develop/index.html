@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/images/dragon-ampersand2.png" alt="dragon ampersand icon"/>
+        <title>D&D Character Creator</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+        <main class="position">
+            <header class="headerbar">
+                <img src="./assets/images/dragon-ampersand2.png" alt="dragon ampersand"/>
+                <h1><a href="index.html">Character Creator</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html#basics">Basics</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="info.html">Information</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="sheet" id="basics">
+                <div class="info-box">
+                    <p>Welcome to the character creator! Please enter your character's information and stats:</p>
+                    <p>Name:</p>
+                    <input type="text" class="fillin">
+                    <p>Race:</p>
+                    <input type="text" class="fillin">
+                    <p>Class:</p>
+                    <input type="text" class="fillin">
+                    <p>Subclass:</p>
+                    <input type="text" class="fillin">
+                <span onclick="newElement()" class="button">Enter</span>
+                </div>
+                <div class="form">
+                    <h2>Character Sheet</h2>
+                    <table>
+                        <tr>
+                            <th class="righty">Name:</th>
+                            <td class="lefty">Enter Name</td>
+                        </tr>
+                        <tr>
+                            <th class="righty">Race:</th>
+                            <td class="lefty">Enter Race</td>
+                        </tr>
+                        <tr>
+                            <th class="righty">Class:</th>
+                            <td class="lefty">Enter Class</td>
+                        </tr>
+                        <tr>
+                            <th>Subclass:</th>
+                            <td>Enter Subclass</td>
+                        </tr>
+                    </table>
+                    <span onclick="clear()" class="button" id="reset">Reset</span>
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="info-box">
+                    <p>Now we're going to look through skills for your class. Choose two:</p>
+                    <span onclick="newElement()" class="new-skills" id="acrobatics">Acrobatics</span>
+                    <span onclick="newElement()" class="new-skills" id="animal-handling">Animal Handling</span>
+                    <span onclick="newElement()" class="new-skills" id="arcana">Arcana</span>
+                    <span onclick="newElement()" class="new-skills" id="athletics">Athletics</span>
+                    <span onclick="newElement()" class="new-skills" id="deception">Deception</span>
+                    <span onclick="newElement()" class="new-skills" id="history">History</span>
+                    <span onclick="newElement()" class="new-skills" id="insight">Insight</span>
+                    <span onclick="newElement()" class="new-skills" id="intimidation">Intimidation</span>
+                    <span onclick="newElement()" class="new-skills" id="investigation">Investigation</span>
+                    <span onclick="newElement()" class="new-skills" id="medicine">Medicine</span>
+                    <span onclick="newElement()" class="new-skills" id="nature">Nature</span>
+                    <span onclick="newElement()" class="new-skills" id="perception">Perception</span>
+                    <span onclick="newElement()" class="new-skills" id="performance">Performance</span>
+                    <span onclick="newElement()" class="new-skills" id="persuasion">Persuasion</span>
+                    <span onclick="newElement()" class="new-skills" id="religion">Religion</span>
+                    <span onclick="newElement()" class="new-skills" id="sleight-of-hand">Sleight of Hand</span>
+                    <span onclick="newElement()" class="new-skills" id="stealth">Stealth</span>
+                    <span onclick="newElement()" class="new-skills" id="survival">Survival</span>
+                </div>
+                <div class="form">
+                    <h2>Skill Sheet</h2>
+                    <ul>
+                        <li class="new-skills">Add skill</li>
+                        <li class="new-skills">Add skill</li>
+                    </ul>
+                </div>
+            </section>
+
+            <footer>
+                Made by Group 2
+            </footer>
+        </main>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
