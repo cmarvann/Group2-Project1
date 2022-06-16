@@ -145,6 +145,30 @@ h2 {
     background-color: rgb(75, 75, 75);
 }
 
+.new-skills {
+    margin-bottom: 3px;
+    padding:5px;
+    border-style: none;
+    background-color: #cfcfcf;
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.new-skills:hover {
+    color: var(--hover-color);
+    background-color: rgb(75, 75, 75);
+}
+
+#reset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 50px;
+}
+
 .form {
     background-color: var(--box-color);
     border-radius: 20px;
