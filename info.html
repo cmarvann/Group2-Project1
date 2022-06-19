@@ -37,12 +37,36 @@
                     <p>Sit amet nulla facilisi morbi. Porttitor eget dolor morbi non arcu risus quis. Congue nisi vitae suscipit tellus mauris. Aliquam faucibus purus in massa tempor nec. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Varius sit amet mattis vulputate enim nulla aliquet porttitor lacus. Purus sit amet luctus venenatis lectus magna fringilla. Arcu cursus vitae congue mauris rhoncus aenean vel. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Amet venenatis urna cursus eget. Quam vulputate dignissim suspendisse in est ante in. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Ornare lectus sit amet est placerat in egestas erat imperdiet. Cras pulvinar mattis nunc sed blandit. Mi bibendum neque egestas congue quisque egestas diam in arcu.</p>
                 </div>
             </section>
+            <section>
+                <script>
+                    // dragon api
+                    var game = new Phaser.Game(800, 600, Phaser.WEBGL, 'phaser-example', { preload: preload, create: create });
+
+                    function preload() {
+                        game.load.image('sky', 'assets/skies/deepblue.png');
+                        game.load.image('dragonTexture', 'assets/creature/dragon.png');
+                        game.load.json('dragonMesh', 'assets/creature/dragon.json');
+                    }
+
+                    var dragon = null;
+
+                    function create() {
+                        game.add.image(0, 0, 'sky');
+
+                        dragon = game.add.creature(450, 350, 'dragonTexture', 'dragonMesh');
+
+                        dragon.scale.set(25.0);
+                        
+                        dragon.play(true); //  true = loop
+                    };
+                </script>
+            </section>
 
             <footer>
                 Made by Group 2
             </footer>
         </main>
-        <script src="./assets/js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/phaser@3.15.1/dist/phaser-arcade-physics.min.js"></script>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>

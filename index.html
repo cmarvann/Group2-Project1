@@ -9,14 +9,15 @@
     </head>
 
     <body>
-        <main>
+        <main class="position">
             <header class="headerbar">
                 <img src="" alt="dragon ampersand"/>
-                <h1><a href="#">Character Creator</a></h1>
+                <h1><a href="index.html">Character Creator</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="#basics">Basics</a></li>
-                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="index.html#basics">Basics</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="info.html">Information</a></li>
                     </ul>
                 </nav>
             </header>
@@ -54,31 +55,38 @@
                             <td id="subclassList">Enter Subclass</td>
                         </tr>
                     </table>
+                    <span onclick="clear()" class="button" id="reset">Reset</span>
                 </div>
             </section>
 
             <section id="skills">
                 <div class="info-box">
-                    <p>Now we're going to look through skills and add them to your character:</p>
-                    <input type="text" class="fillin" id="skill">
-                    <span class="addBtn button">Add</span>
+                    <p>Now we're going to look through skills for your class. Choose two:</p>
+                    <span onclick="newElement()" class="new-skills" id="acrobatics">Acrobatics</span>
+                    <span onclick="newElement()" class="new-skills" id="animal-handling">Animal Handling</span>
+                    <span onclick="newElement()" class="new-skills" id="arcana">Arcana</span>
+                    <span onclick="newElement()" class="new-skills" id="athletics">Athletics</span>
+                    <span onclick="newElement()" class="new-skills" id="deception">Deception</span>
+                    <span onclick="newElement()" class="new-skills" id="history">History</span>
+                    <span onclick="newElement()" class="new-skills" id="insight">Insight</span>
+                    <span onclick="newElement()" class="new-skills" id="intimidation">Intimidation</span>
+                    <span onclick="newElement()" class="new-skills" id="investigation">Investigation</span>
+                    <span onclick="newElement()" class="new-skills" id="medicine">Medicine</span>
+                    <span onclick="newElement()" class="new-skills" id="nature">Nature</span>
+                    <span onclick="newElement()" class="new-skills" id="perception">Perception</span>
+                    <span onclick="newElement()" class="new-skills" id="performance">Performance</span>
+                    <span onclick="newElement()" class="new-skills" id="persuasion">Persuasion</span>
+                    <span onclick="newElement()" class="new-skills" id="religion">Religion</span>
+                    <span onclick="newElement()" class="new-skills" id="sleight-of-hand">Sleight of Hand</span>
+                    <span onclick="newElement()" class="new-skills" id="stealth">Stealth</span>
+                    <span onclick="newElement()" class="new-skills" id="survival">Survival</span>
                 </div>
                 <div class="form">
                     <h2>Skill Sheet</h2>
-                    <table>
-                        <tr>
-                            <th class="righty">Primary:</th>
-                            <td class="lefty">Enter Skill</td>
-                        </tr>
-                        <tr>
-                            <th class="righty">Secondary:</th>
-                            <td class="lefty">Enter Skill</td>
-                        </tr>
-                        <tr>
-                            <th>Tertiary:</th>
-                            <td>Enter Skill</td>
-                        </tr>
-                    </table>
+                    <ul>
+                        <li class="new-skills">Add skill</li>
+                        <li class="new-skills">Add skill</li>
+                    </ul>
                 </div>
             </section>
 
