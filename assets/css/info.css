@@ -1,0 +1,18 @@
+.info-page {
+    justify-content: left;
+    background-color: var(--box-color);
+    border-radius: 20px;
+    box-sizing: content-box;
+    height: auto;
+    width: 80%;
+    padding: 30px;
+}
+
+.info-page p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.info-page ul {
+    margin-left: 50px;
+}

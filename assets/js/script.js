@@ -22,5 +22,26 @@ $(".addBtn").on("click", function() {
     localStorage.setItem("Skills", skill);
 });
 
+//options 
+var clientId = "327243910715-34fu59dnj8mm575ou88kbd7rlbjj9gje.apps.googleusercontent.com";
+var discoveryDocs = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
+var scopes = "https://www.googleapis.com/auth/youtube.readonly";
 
+var apiKey = "AIzaSyALXCnZWCKsJanquAd1DD_9WLfw--Ziwfc";
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Replace the 'ytplayer' element with an <iframe> and
+// YouTube player after the API code downloads.
+var player;
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: '00EvO-X6Wu4&list=PLDnRMnDDjAzK5uZLidDUtHtD1iN06Qe0G'
+    });
+  }
 
