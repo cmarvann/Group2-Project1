@@ -83,6 +83,12 @@ h2 {
     text-decoration: underline;
 }
 
+h3 {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-indent: 50px;
+}
+
 .sheet, #skills {
     display: flex;
     flex-wrap: wrap;
