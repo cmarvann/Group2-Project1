@@ -23,11 +23,30 @@ $(".addBtn").on("click", function() {
 });
 
 //options 
-var clientId = "327243910715-34fu59dnj8mm575ou88kbd7rlbjj9gje.apps.googleusercontent.com";
-var discoveryDocs = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
-var scopes = "https://www.googleapis.com/auth/youtube.readonly";
+var CLIENT_ID = "327243910715-34fu59dnj8mm575ou88kbd7rlbjj9gje.apps.googleusercontent.com";
+var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
+var SCOPES = "https://www.googleapis.com/auth/youtube.readonly";
 
-var apiKey = "AIzaSyALXCnZWCKsJanquAd1DD_9WLfw--Ziwfc";
+// default yt channel
+var defaultChannel = "Jocat";
+
+// load auth library 
+function handleClientLoad() {
+    GamepadHapticActuator.load("client:auth2", initClient);
+}
+
+// init api client library and set up in listeners
+function initClient() {
+    GamepadHapticActuator.client.init({
+        discoveryDocs: DISCOVERY_DOCS,
+        clientId: CLIENT_ID,
+        scopes: SCOPES
+    }).then(() => {
+
+    })
+}
+
+// var apiKey = "AIzaSyALXCnZWCKsJanquAd1DD_9WLfw--Ziwfc";
 // Load the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
@@ -41,7 +60,7 @@ function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
       height: '360',
       width: '640',
-      videoId: '00EvO-X6Wu4&list=PLDnRMnDDjAzK5uZLidDUtHtD1iN06Qe0G'
+      videoId: 'IVAJrYOOtwI'
     });
   }
 
