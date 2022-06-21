@@ -14,6 +14,6 @@ document.getElementById('acrobatics').addEventListener('click', function(){
     fetch(dndUrl + "acrobatics")
          .then(response => response.json())
          .then(json => {
-              console.log(json.desc[0]);
+              console.log(json.desc[0])
          });
 });
