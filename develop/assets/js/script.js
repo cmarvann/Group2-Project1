@@ -4,12 +4,10 @@ var skillClose = "";
 var reset = "";
 
 
-// container for skills div
 
-var skillEl = document.querySelector("#multiple-skills");
 
-//container for skills-list div 
-var addSkillel = document.querySelector("#add-skill");
+// //container for skills-list div 
+ var addSkillel = document.querySelector("#form");
 
 
 
@@ -25,7 +23,11 @@ var addSkillel = document.querySelector("#add-skill");
 
 
 
-var getSkillsName = function(){
+
+
+var dndUrl = "https://www.dnd5eapi.co/api/skills/";
+
+
 
 
 
@@ -45,14 +47,40 @@ var getSkillsName = function(){
 
 
     });
-    getSkillsName();
+
+
+   var newElement = function(){
+
+
+    var singleSkillEl = document.querySelector(".single-skill");
+
+    singleSkillEl.addEventListener("click",function(event){
+
+        if(event){
+            singleSkillEl.appendChild(addSkillel);
+
+        }
+        
+
+
+        
+        
+
+     })
+       
+    
+    } 
+            
+       
+    
+    
 
 
 
 
     
 
-} 
+
 
 
 
