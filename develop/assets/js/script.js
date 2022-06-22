@@ -4,370 +4,371 @@ var skillArray = [];
 
 
 
-document.getElementById('acrobatics').addEventListener('click', function(){
+var acrobatics = function(){
 
     fetch(dndUrl + "acrobatics")
          .then(response => response.json())
          .then(json => {
           skillArray.push(json.desc[0]);
           if (skillArray.length <= 2){
-              var skillUl = document.getElementById("add-skills");
-              var addSkillEl = document.createElement("li");
-              var skillName = document.createTextNode(json.name);
-              var skillText = document.createTextNode(json.desc[0]);
-              addSkillEl.appendChild(skillText);
-              skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
           }
           else {
                return null;
           }
               
          });
-});
+};
 
-document.getElementById('animal-handling').addEventListener('click', function(){
+var animal = function(){
 
      fetch(dndUrl + "animal-handling")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
                
           });
-});
+};
 
-document.getElementById('arcana').addEventListener('click', function(){
+var arcana = function(){
 
      fetch(dndUrl + "arcana")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('athletics').addEventListener('click', function(){
+var athletics = function(){
 
      fetch(dndUrl + "athletics")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('deception').addEventListener('click', function(){
+var deception = function(){
 
      fetch(dndUrl + "deception")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('history').addEventListener('click', function(){
+var hist = function(){
 
      fetch(dndUrl + "history")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('insight').addEventListener('click', function(){
+var insight = function(){
 
      fetch(dndUrl + "insight")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('intimidation').addEventListener('click', function(){
+var intimidation = function(){
 
      fetch(dndUrl + "intimidation")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('investigation').addEventListener('click', function(){
+var investigation = function(){
 
      fetch(dndUrl + "investigation")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('medicine').addEventListener('click', function(){
+var medicine = function(){
 
      fetch(dndUrl + "medicine")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('nature').addEventListener('click', function(){
+var nature = function(){
 
      fetch(dndUrl + "nature")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('perception').addEventListener('click', function(){
+var perception = function(){
 
      fetch(dndUrl + "perception")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('performance').addEventListener('click', function(){
+var perf = function(){
 
      fetch(dndUrl + "performance")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('persuasion').addEventListener('click', function(){
+var persuasion = function(){
 
      fetch(dndUrl + "persuasion")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('religion').addEventListener('click', function(){
+var religion = function(){
 
      fetch(dndUrl + "religion")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('sleight-of-hand').addEventListener('click', function(){
+var sleight = function(){
 
      fetch(dndUrl + "sleight-of-hand")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('stealth').addEventListener('click', function(){
+var stealth = function(){
 
      fetch(dndUrl + "stealth")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+};
 
-document.getElementById('survival').addEventListener('click', function(){
+var survival = function(){
 
      fetch(dndUrl + "survival")
           .then(response => response.json())
           .then(json => {
            skillArray.push(json.desc[0]);
            if (skillArray.length <= 2){
-               var skillUl = document.getElementById("add-skills");
-               var addSkillEl = document.createElement("li");
-               var skillName = document.createTextNode(json.name);
-               var skillText = document.createTextNode(json.desc[0]);
-               addSkillEl.appendChild(skillText);
-               skillUl.appendChild(addSkillEl);
+               var skillTable = document.getElementById("add-skills");
+               var skillRow = skillTable.insertRow(0);
+               var skillName = skillRow.insertCell(0);
+               var skillText = skillRow.insertCell(1);
+               skillName.innerHTML = json.name;
+               skillText.innerHTML = json.desc[0];
            }
            else {
                 return null;
            }
           });
-});
+}
 
-var clearSkills = function() {
-     document.getElementById('add-skills').innerHTML = '';
+var remove = function() {
+     document.getElementById("add-skills").deleteRow(0);
+     skillArray.length = 0;
 }
 
 // saves the user info to local storage
