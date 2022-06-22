@@ -22,45 +22,23 @@ $(".addBtn").on("click", function() {
     localStorage.setItem("Skills", skill);
 });
 
-//options 
-var CLIENT_ID = "327243910715-34fu59dnj8mm575ou88kbd7rlbjj9gje.apps.googleusercontent.com";
-var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"];
-var SCOPES = "https://www.googleapis.com/auth/youtube.readonly";
-
-// default yt channel
-var defaultChannel = "Jocat";
-
-// load auth library 
-function handleClientLoad() {
-    GamepadHapticActuator.load("client:auth2", initClient);
-}
-
-// init api client library and set up in listeners
-function initClient() {
-    GamepadHapticActuator.client.init({
-        discoveryDocs: DISCOVERY_DOCS,
-        clientId: CLIENT_ID,
-        scopes: SCOPES
-    }).then(() => {
-
-    })
-}
-
-// var apiKey = "AIzaSyALXCnZWCKsJanquAd1DD_9WLfw--Ziwfc";
-// Load the IFrame Player API code asynchronously.
+// var YOUTUBE_API_KEY = "AIzaSyALXCnZWCKsJanquAd1DD_9WLfw--Ziwfc"
+// creates script element and cites the source and grabs new script tag
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
+tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// Replace the 'ytplayer' element with an <iframe> and
-// YouTube player after the API code downloads.
+// replaces the html element with player for youtube and shows the playlist
 var player;
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
       height: '360',
       width: '640',
-      videoId: 'IVAJrYOOtwI'
+      playerVars: {
+        color: 'red',
+        playlist: 'IVAJrYOOtwI,DBoqrSn1GR8,S7ANzMWd4xI,00EvO-X6Wu4,qiHXxrCB5yk,y84OYRwzZU8,WMo_gCRMSfA,nVReBH3QYD0,1CZDGFFHnI4,Ch5vWBPCrl0,P_qzyTFSrTE,4FX_2UevHbE,EHJGJL40cQs,9mvTgXPHlvo,U1Gs8WTddI4,tV7X76FKkeI,Ape4gtRZIys,AGTkGFQg3Rw,ANdG2DGm0CQ'
+    },
     });
   }
 
