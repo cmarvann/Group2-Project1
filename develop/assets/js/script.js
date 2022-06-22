@@ -10,6 +10,86 @@ var reset = "";
 var dndUrl = "https://www.dnd5eapi.co/api/skills/";
 
 var skillEl = document.querySelector(".add-skills");
+var nameInputEl = document.querySelector(".name-input");
+var raceInputEl = document.querySelector(".race-input");
+var classInputEl = document.querySelector(".class-input");
+
+var characterForm = document.querySelector(".character-sheet");
+var storeCharacterName = [];
+var storeCharacterRace = [];
+var storeCharacerClass = [];
+
+
+
+
+     var nameEntryEl = document.querySelector(".name");
+     var raceEntryEl = document.querySelector(".race");
+     var classEntryEl = document.querySelector(".class");
+
+     document.getElementById('enter-button').addEventListener('click', function(){
+               
+               storeCharacterName.push(nameInputEl);
+          
+               if(storeCharacterName.length <= 1){
+                    
+                    
+                    var appendName = document.createElement("p");
+                    appendName.textContent = (nameInputEl.value);
+                    nameEntryEl.appendChild(appendName);
+                    
+
+
+
+               }else{
+                    
+               }
+
+               storeCharacterRace.push(raceInputEl);
+
+               if(storeCharacterRace.length <= 1){
+                    var appendRace = document.createElement("p");
+                    appendRace.textContent = (raceInputEl.value);
+                    raceEntryEl.appendChild(appendRace);
+                    
+                    
+               }else{
+                    
+               }
+               
+               storeCharacerClass.push(classInputEl);
+
+               if(storeCharacerClass.length <= 1){
+                    var appendClass = document.createElement("p");
+                    appendClass.textContent = (classInputEl.value);
+                    classEntryEl.appendChild(appendClass);
+                    
+
+                    
+               }else {
+                    
+               }
+          });
+
+          document.getElementById('reset').addEventListener('click',function(){
+                
+               
+
+
+           });
+
+          
+
+
+
+     
+
+
+
+
+
+
+
+
 
 
 

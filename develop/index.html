@@ -26,30 +26,30 @@
                 <div class="info-box">
                     <p>Welcome to the character creator! Please enter your character's information and stats:</p>
                     <p>Name:</p>
-                    <input type="text" class="fillin">
+                    <input type="text" class="fillin name-input">
                     <p>Race:</p>
-                    <input type="text" class="fillin">
+                    <input type="text" class="fillin race-input">
                     <p>Class:</p>
-                    <input type="text" class="fillin">
-                <span onclick="newElement()" class="button">Enter</span>
+                    <input type="text" class="fillin class-input">
+                <span class="button" id = "enter-button">Enter</span>
                 </div>
-                <div class="form">
+                <div class="form character-sheet">
                     <h2>Character Sheet</h2>
                     <table>
                         <tr>
                             <th class="righty">Name:</th>
-                            <td class="lefty">Enter Name</td>
+                            <td class="lefty name"></td>
                         </tr>
                         <tr>
                             <th class="righty">Race:</th>
-                            <td class="lefty">Enter Race</td>
+                            <td class="lefty race"></td>
                         </tr>
                         <tr>
                             <th>Class:</th>
-                            <td>Enter Class</td>
+                            <td class = "lefty class"></td>
                         </tr>
                     </table>
-                    <span onclick="clear()" class="button" id="reset">Reset</span>
+                    <span  class="button" id="reset">Reset</span>
                 </div>
             </section>
 
