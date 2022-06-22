@@ -149,6 +149,7 @@ h3 {
     width: 75px;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -168,10 +169,10 @@ h3 {
     text-align: center;
     text-decoration: none;
     list-style: none;
+    cursor: pointer;
 }
-
-.add-skills {
-    margin-bottom: 3px;
+#add-skills {
+    margin-bottom: 15px;
     padding:5px;
     border-style: none;
     background-color: #cfcfcf;
@@ -179,7 +180,7 @@ h3 {
     font-size: 16px;
     width: 100%;
     border-radius: 5px;
-    text-align: center;
+    text-align: justify;
     text-decoration: none;
     list-style: none;
 }

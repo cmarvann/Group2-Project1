@@ -26,12 +26,38 @@
                 <div class="info-box">
                     <p>Welcome to the character creator! Please enter your character's information and stats:</p>
                     <p>Name:</p>
-                    <input type="text" class="fillin">
+                    <input type="text" class="fillin" id="name">
                     <p>Race:</p>
-                    <input type="text" class="fillin">
+                    <select class="fillin" id="race">
+                        <option disabled selected>Select--</option>
+                        <option>Dragonborn</option>
+                        <option>Dwarf</option>
+                        <option>Elf</option>
+                        <option>Gnome</option>
+                        <option>Half-Elf</option>
+                        <option>Half-Orc</option>
+                        <option>Halfling/Hobbit</option>
+                        <option>Human</option>
+                        <option>Tiefling</option>
+                    </select>
                     <p>Class:</p>
-                    <input type="text" class="fillin">
-                <span onclick="newElement()" class="button">Enter</span>
+                    <select class="fillin" id="class">
+                        <option disabled selected>Select--</option>
+                        <option>Artificer</option>
+                        <option>Barbarian</option>
+                        <option>Bard</option>
+                        <option>Cleric</option>
+                        <option>Druid</option>
+                        <option>Fighter</option>
+                        <option>Monk</option>
+                        <option>Paladin</option>
+                        <option>Ranger</option>
+                        <option>Rogue</option>
+                        <option>Sorceror</option>
+                        <option>Warlock</option>
+                        <option>Wizard</option>
+                    </select>
+                <span class="saveBtn button">Enter</span>
                 </div>
                 <div class="form">
                     <h2>Character Sheet</h2>
@@ -77,7 +103,8 @@
                 </div>
                 <div class="form">
                     <h2>Skill Sheet</h2>
-                    <ul class="add-skills"></ul>
+                    <ul id="add-skills"></ul>
+                    <span onclick="clear()" class="button" id="reset">Reset</span>
                 </div>
             </section>
 
@@ -85,6 +112,7 @@
                 Made by Group 2
             </footer>
         </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
