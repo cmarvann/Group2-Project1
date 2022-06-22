@@ -54,14 +54,6 @@ var enterChara = function() {
 
 };
 
-var clearForm = document.getElementById('enter');
-
-clearForm.addEventListener('click', function(){
-     nameEntryEl.value = '';
-     raceEntryEl.value = 'Select--';
-     classEntryEl.value = 'Select--';
-});
-
 var acrobatics = function(){
 
     fetch(dndUrl + "acrobatics")
