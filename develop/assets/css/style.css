@@ -197,7 +197,7 @@ h3 {
     margin-left: 50px;
 }
 
-#form {
+.form {
     box-sizing: content-box;
     background-color: var(--box-color);
     border-radius: 20px;
@@ -205,10 +205,7 @@ h3 {
     width: 400px;
 }
 
-/* .form table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.form table {
     text-align: left;
     font-size: 16px;
     border-spacing: 20px;
@@ -216,21 +213,10 @@ h3 {
     width: 100%;
 }
 
-.righty, .lefty {
-    border-bottom: var(--primary-color) solid 1px;
-}
-
-.form table th {
-    border-right: var(--primary-color) solid 1px;
-    text-align: left;
-    padding: 15px 20px 15px 0px;
-}
-
 .form table td {
-    border-left: var(--primary-color) solid 1px;
-    text-align: right;
+    text-align: left;
     padding: 15px 0px 15px 20px;
-} */
+} 
 
 footer {
     padding: 30px;

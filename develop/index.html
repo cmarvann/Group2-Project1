@@ -24,7 +24,7 @@
             </header>
 
             <section class="sheet" id="basics">
-                <div class="info-box">
+                <div class="info-box" id="chara-form">
                     <p>Welcome to the character creator! Please enter your character's information and stats:</p>
                     <p>Name:</p>
                     <input type="text" class="fillin" id="name">
@@ -58,23 +58,11 @@
                         <option>Warlock</option>
                         <option>Wizard</option>
                     </select>
-                <span class="saveBtn button">Enter</span>
+                <span class="saveBtn button" onclick="charaEnter()">Enter</span>
                 </div>
-                <div class="table is-striped" id="form">
+                <div class="form">
                     <h2>Character Sheet</h2>
-                    <table>
-                        <tr>
-                            <th>Name:</th>
-                            <td id="name"></td>
-                        </tr>
-                        <tr>
-                            <th>Race:</th>
-                            <td id="race"></td>
-                        </tr>
-                        <tr>
-                            <th>Class:</th>
-                            <td id="class"></td>
-                        </tr>
+                    <table  id="chara">
                     </table>
                     <span class="button" id="reset">Reset</span>
                 </div>
@@ -102,7 +90,7 @@
                     <span class="new-skills" id="stealth" onclick="stealth()">Stealth</span>
                     <span class="new-skills" id="survival" onclick="survival()">Survival</span>
                 </div>
-                <div id="form">
+                <div class="form">
                     <h2>Skill Sheet</h2>
                     <table id="add-skills"></table>
                     <span class="button" id="reset" onclick="remove()">Reset</span>

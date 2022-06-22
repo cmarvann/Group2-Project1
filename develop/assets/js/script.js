@@ -1,8 +1,9 @@
 var dndUrl="https://www.dnd5eapi.co/api/skills/";
-var skillSheet = document.getElementById("add-skills");
 var skillArray = [];
 
+var charaEnter = function() {
 
+}
 
 var acrobatics = function(){
 
