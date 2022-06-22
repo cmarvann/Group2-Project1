@@ -1,9 +1,66 @@
 var dndUrl="https://www.dnd5eapi.co/api/skills/";
 var skillArray = [];
 
-var charaEnter = function() {
+var nameInputEl = document.querySelector(".name-input");
+var raceInputEl = document.querySelector(".race-input");
+var classInputEl = document.querySelector(".class-input");
 
-}
+var characterForm = document.querySelector(".character-sheet");
+var storeCharacterName = [];
+var storeCharacterRace = [];
+var storeCharacterClass = [];
+
+var nameEntryEl = document.getElementById("name");
+var raceEntryEl = document.getElementById("race");
+var classEntryEl = document.getElementById("class");
+
+var enterChara = function() {
+          
+     storeCharacterName.push(nameInputEl);
+     
+          if(storeCharacterName.length <= 1){  
+               var nameTable = document.getElementById("chara");
+               var nameRow = nameTable.insertRow(0);
+               nameRow.setAttribute('id', 'name-row');
+               var nameHead = nameRow.insertCell(0);
+               var nameText = nameRow.insertCell(1);
+               nameHead.innerHTML = "Name:";
+               nameText.innerHTML =  nameInputEl.value;
+          }
+
+     storeCharacterRace.push(raceInputEl);
+     
+          if(storeCharacterRace.length <= 1){  
+               var raceTable = document.getElementById("chara");
+               var raceRow = raceTable.insertRow(1);
+               raceRow.setAttribute('id', 'race-row');
+               var raceHead = raceRow.insertCell(0);
+               var raceText = raceRow.insertCell(1);
+               raceHead.innerHTML = "Race:";
+               raceText.innerHTML =  raceInputEl.value;
+          }
+
+     storeCharacterClass.push(classInputEl);
+     
+          if(storeCharacterClass.length <= 1){  
+               var classTable = document.getElementById("chara");
+               var classRow = classTable.insertRow(2);
+               classRow.setAttribute('id', 'class-row');
+               var classHead = classRow.insertCell(0);
+               var classText = classRow.insertCell(1);
+               classHead.innerHTML = "Class:";
+               classText.innerHTML =  classInputEl.value;
+          }
+
+};
+
+var clearForm = document.getElementById('enter');
+
+clearForm.addEventListener('click', function(){
+     nameEntryEl.value = '';
+     raceEntryEl.value = 'Select--';
+     classEntryEl.value = 'Select--';
+});
 
 var acrobatics = function(){
 
@@ -372,10 +429,17 @@ var remove = function() {
      skillArray.length = 0;
 }
 
-// saves the user info to local storage
+var reset = function() {
+     document.getElementById("name-row").remove();
+     document.getElementById("race-row").remove();
+     document.getElementById("class-row").remove();
+     storeCharacterClass.length = 0;
+     storeCharacterName.length = 0;
+     storeCharacterRace.length = 0;
+}
+
 var user = {}
 $(".saveBtn").on("click", function() {
-    //setting the local storage for each hour
     var name = document.getElementById("name").value;
     localStorage.setItem("Name", name);
 
@@ -386,7 +450,6 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem("Class", userClass);
 });
 
-// saves the user skills to local storafe
 var skills = {};
 $(".addBtn").on("click", function() {
     var skill = document.getElementById("skill").value;
