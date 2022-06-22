@@ -185,6 +185,12 @@ h3 {
     list-style: none;
 }
 
+#add-skills li {
+    border-bottom: black solid 1px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
 .new-skills:hover {
     color: var(--hover-color);
     background-color: rgb(75, 75, 75);

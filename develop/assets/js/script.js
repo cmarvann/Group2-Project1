@@ -2,6 +2,8 @@ var dndUrl="https://www.dnd5eapi.co/api/skills/";
 var skillSheet = document.getElementById("add-skills");
 var skillArray = [];
 
+
+
 document.getElementById('acrobatics').addEventListener('click', function(){
 
     fetch(dndUrl + "acrobatics")
@@ -363,6 +365,10 @@ document.getElementById('survival').addEventListener('click', function(){
            }
           });
 });
+
+var clearSkills = function() {
+     document.getElementById('add-skills').innerHTML = '';
+}
 
 // saves the user info to local storage
 var user = {}
