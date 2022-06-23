@@ -416,7 +416,7 @@ var survival = function(){
           });
 }
 
-var remove = function() {
+var removeSkill = function() {
      document.getElementById("add-skills").deleteRow(0);
      skillArray.length = 0;
 }
