@@ -1,6 +1,6 @@
 # Group2 Project
 
-![image](https://user-images.githubusercontent.com/104536689/175185422-6b47c9a2-1ed7-47ae-b9c0-d9042ecebe1e.png)
+![image](https://user-images.githubusercontent.com/104536689/175185511-b558a009-1032-4ad7-92d1-6d0ec7197174.png)
 
 
 We need a  README file that  clearly describes our project 
