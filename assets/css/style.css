@@ -20,6 +20,11 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.position {
+    position: relative;
+    padding-bottom: 120px;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -78,6 +83,12 @@ h2 {
     text-decoration: underline;
 }
 
+h3 {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-indent: 50px;
+}
+
 .sheet, #skills {
     display: flex;
     flex-wrap: wrap;
@@ -128,6 +139,20 @@ h2 {
     font-size: 14px;
 }
 
+#chara {
+    margin-bottom: 15px;
+    padding:5px;
+    border-style: none;
+    background-color: #cfcfcf;
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: justify;
+    text-decoration: none;
+    list-style: none;
+}
+
 .button {
     margin: 20px 20px 15px 0px;
     padding: 10px;
@@ -138,6 +163,7 @@ h2 {
     width: 75px;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -145,17 +171,56 @@ h2 {
     background-color: rgb(75, 75, 75);
 }
 
+.new-skills {
+    margin-bottom: 3px;
+    padding:5px;
+    border-style: none;
+    background-color: #cfcfcf;
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+#add-skills {
+    margin-bottom: 15px;
+    padding:5px;
+    border-style: none;
+    background-color: #cfcfcf;
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: justify;
+    text-decoration: none;
+    list-style: none;
+}
+
+.new-skills:hover {
+    color: var(--hover-color);
+    background-color: rgb(75, 75, 75);
+}
+
+#reset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 50px;
+}
+
 .form {
+    box-sizing: content-box;
     background-color: var(--box-color);
     border-radius: 20px;
-    padding-bottom: 20px;
+    padding: 10px 30px 30px 30px;
     width: 400px;
 }
 
 .form table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     text-align: left;
     font-size: 16px;
     border-spacing: 20px;
@@ -163,21 +228,12 @@ h2 {
     width: 100%;
 }
 
-.righty, .lefty {
-    border-bottom: var(--primary-color) solid 1px;
-}
-
-.form table th {
-    border-right: var(--primary-color) solid 1px;
-    text-align: left;
-    padding: 15px 20px 15px 0px;
-}
-
 .form table td {
-    border-left: var(--primary-color) solid 1px;
-    text-align: right;
-    padding: 15px 0px 15px 20px;
-}
+    border-bottom: black solid 1px;
+    border-right: black solid 1px;
+    text-align: justify;
+    padding: 15px 15px 15px 20px;
+} 
 
 footer {
     padding: 30px;
@@ -188,7 +244,7 @@ footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-size: 24px;
-    position: static;
+    position: absolute;
     bottom: 0;
     width: 100%;
     text-decoration: underline;

@@ -6,79 +6,94 @@
         <link rel="icon" href="./assets/images/dragon-ampersand2.png" alt="dragon ampersand icon"/>
         <title>D&D Character Creator</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
+        
     </head>
 
     <body>
-        <main>
+        <main class="position">
             <header class="headerbar">
                 <img src="./assets/images/dragon-ampersand2.png" alt="dragon ampersand"/>
-                <h1><a href="#">Character Creator</a></h1>
+                <h1><a href="index.html">Character Creator</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="#basics">Basics</a></li>
-                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="index.html#basics">Basics</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="./assets/info.html">Information</a></li>
                     </ul>
                 </nav>
             </header>
 
             <section class="sheet" id="basics">
-                <div class="info-box">
+                <div class="info-box" id="chara-form">
                     <p>Welcome to the character creator! Please enter your character's information and stats:</p>
                     <p>Name:</p>
-                    <input type="text" class="fillin">
+                    <input type="text" class="fillin name-input" id="name">
                     <p>Race:</p>
-                    <input type="text" class="fillin">
+                    <select class="fillin race-input" id="race">
+                        <option disabled selected>Select--</option>
+                        <option>Dragonborn</option>
+                        <option>Dwarf</option>
+                        <option>Elf</option>
+                        <option>Gnome</option>
+                        <option>Half-Elf</option>
+                        <option>Half-Orc</option>
+                        <option>Halfling/Hobbit</option>
+                        <option>Human</option>
+                        <option>Tiefling</option>
+                    </select>
                     <p>Class:</p>
-                    <input type="text" class="fillin">
-                    <p>Subclass:</p>
-                    <input type="text" class="fillin">
-                <span onclick="newElement()" class="button">Enter</span>
+                    <select class="fillin class-input" id="class">
+                        <option disabled selected>Select--</option>
+                        <option>Artificer</option>
+                        <option>Barbarian</option>
+                        <option>Bard</option>
+                        <option>Cleric</option>
+                        <option>Druid</option>
+                        <option>Fighter</option>
+                        <option>Monk</option>
+                        <option>Paladin</option>
+                        <option>Ranger</option>
+                        <option>Rogue</option>
+                        <option>Sorceror</option>
+                        <option>Warlock</option>
+                        <option>Wizard</option>
+                    </select>
+                <span class="saveBtn button" id="enter" onclick="enterChara()">Enter</span>
                 </div>
                 <div class="form">
                     <h2>Character Sheet</h2>
-                    <table>
-                        <tr>
-                            <th class="righty">Name:</th>
-                            <td class="lefty">Enter Name</td>
-                        </tr>
-                        <tr>
-                            <th class="righty">Race:</th>
-                            <td class="lefty">Enter Race</td>
-                        </tr>
-                        <tr>
-                            <th class="righty">Class:</th>
-                            <td class="lefty">Enter Class</td>
-                        </tr>
-                        <tr>
-                            <th>Subclass:</th>
-                            <td>Enter Subclass</td>
-                        </tr>
+                    <table id="chara">
                     </table>
+                    <span class="button" id="reset" onclick="reset()">Reset</span>
                 </div>
             </section>
 
             <section id="skills">
                 <div class="info-box">
-                    <p>Now we're going to look through skills and add them to your character:</p>
-                    <input type="text" class="fillin">
-                    <span onclick="newElement()" class="button">Add</span>
+                    <p>Now we're going to look through skills for your class. Choose two:</p>
+                    <span class="new-skills" id="acrobatics" onclick="acrobatics()">Acrobatics</span>
+                    <span class="new-skills" id="animal-handling" onclick="animal()">Animal Handling</span>
+                    <span class="new-skills" id="arcana" onclick="arcana()">Arcana</span>
+                    <span class="new-skills" id="athletics" onclick="athletics()">Athletics</span>
+                    <span class="new-skills" id="deception" onclick="deception()">Deception</span>
+                    <span class="new-skills" id="history" onclick="hist()">History</span>
+                    <span class="new-skills" id="insight" onclick="insight()">Insight</span>
+                    <span class="new-skills" id="intimidation" onclick="intimidation()">Intimidation</span>
+                    <span class="new-skills" id="investigation" onclick="investigation()">Investigation</span>
+                    <span class="new-skills" id="medicine" onclick="medicine()">Medicine</span>
+                    <span class="new-skills" id="nature" onclick="nature()">Nature</span>
+                    <span class="new-skills" id="perception" onclick="perception()">Perception</span>
+                    <span class="new-skills" id="performance" onclick="perf()">Performance</span>
+                    <span class="new-skills" id="persuasion" onclick="persuasion()">Persuasion</span>
+                    <span class="new-skills" id="religion" onclick="religion()">Religion</span>
+                    <span class="new-skills" id="sleight-of-hand" onclick="sleight()">Sleight of Hand</span>
+                    <span class="new-skills" id="stealth" onclick="stealth()">Stealth</span>
+                    <span class="new-skills" id="survival" onclick="survival()">Survival</span>
                 </div>
                 <div class="form">
                     <h2>Skill Sheet</h2>
-                    <table>
-                        <tr>
-                            <th class="righty">Primary:</th>
-                            <td class="lefty">Enter Skill</td>
-                        </tr>
-                        <tr>
-                            <th class="righty">Secondary:</th>
-                            <td class="lefty">Enter Skill</td>
-                        </tr>
-                        <tr>
-                            <th>Tertiary:</th>
-                            <td>Enter Skill</td>
-                        </tr>
-                    </table>
+                    <table id="add-skills"></table>
+                    <span class="button addbtn" id="reset" onclick="removeSkill()">Reset</span>
                 </div>
             </section>
 
@@ -86,6 +101,7 @@
                 Made by Group 2
             </footer>
         </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
