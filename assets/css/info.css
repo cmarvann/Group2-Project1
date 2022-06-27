@@ -1,6 +1,4 @@
 .info-page {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: left;
     background-color: var(--box-color);
     border-radius: 20px;
@@ -13,4 +11,12 @@
 .info-page p {
     margin-bottom: 10px;
     margin-top: 10px;
+}
+
+.info-page ul {
+    margin-left: 50px;
+}
+
+#player {
+    margin-top: 50px;
 }

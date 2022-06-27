@@ -83,10 +83,17 @@ h2 {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD:develop/assets/css/style.css
 .form p {
     text-align: center;
     padding:  0 0 5px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+=======
+h3 {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-indent: 50px;
+>>>>>>> 72e6f1d2b4b3e5d5b66ffa3685e10d9f91c0fc57:assets/css/style.css
 }
 
 .sheet, #skills {
@@ -139,6 +146,20 @@ h2 {
     font-size: 14px;
 }
 
+#chara {
+    margin-bottom: 15px;
+    padding:5px;
+    border-style: none;
+    background-color: #cfcfcf;
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: justify;
+    text-decoration: none;
+    list-style: none;
+}
+
 .button {
     margin: 20px 20px 15px 0px;
     padding: 10px;
@@ -149,6 +170,7 @@ h2 {
     width: 75px;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -167,6 +189,21 @@ h2 {
     width: 100%;
     border-radius: 5px;
     text-align: center;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+#add-skills {
+    margin-bottom: 15px;
+    padding:5px;
+    border-style: none;
+    background-color: #cfcfcf;
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: justify;
     text-decoration: none;
     list-style: none;
 }
@@ -194,9 +231,6 @@ h2 {
 }
 
 .form table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     text-align: left;
     font-size: 16px;
     border-spacing: 20px;
@@ -204,21 +238,12 @@ h2 {
     width: 100%;
 }
 
-.righty, .lefty {
-    border-bottom: var(--primary-color) solid 1px;
-}
-
-.form table th {
-    border-right: var(--primary-color) solid 1px;
-    text-align: left;
-    padding: 15px 20px 15px 0px;
-}
-
 .form table td {
-    border-left: var(--primary-color) solid 1px;
-    text-align: right;
-    padding: 15px 0px 15px 20px;
-}
+    border-bottom: black solid 1px;
+    border-right: black solid 1px;
+    text-align: justify;
+    padding: 15px 15px 15px 20px;
+} 
 
 .dice-roll {
     margin-bottom: 3px;
